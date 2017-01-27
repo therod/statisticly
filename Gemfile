@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 # Additional Gems
 gem 'mail'
 gem 'chartkick'
+gem 'groupdate'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -1,0 +1,14 @@
+<h1>Last Week</h1>
+<%= column_chart Email.last_week.group_by_day_of_week(:date, format: "%a").count %>
+
+<h1>Last Week by hour</h1>
+<%= line_chart Email.last_week.group_by_hour_of_day(:date).count %>
+
+<h1>This Year</h1>
+<%= column_chart Email.this_year.group_by_day_of_week(:date, format: "%a").count %>
+
+<h1>2011 - 2016</h1>
+<%= column_chart Email.date_range('206-01-01', '2016-12-31').group_by_hour_of_day(:date).count %>
+
+<h1>This Year by hour</h1>
+<%= column_chart Email.this_year.group_by_hour_of_day(:date).count %>
