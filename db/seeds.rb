@@ -16,6 +16,9 @@ mails.each do |file|
 
   email.assign_attributes(guid: guid, from: mail.from, to: mail.to,
                           subject: mail.subject, date: mail.date)
+
+  next if email.subject.include?('Wichtig / Important') rescue nil
+
   @new_emails << email
 end
 
